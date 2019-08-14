@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { MeuSegundoComponent } from './meu-segundo/meu-segundo.component';
 import { SamComponent } from './sam/sam.component';
+import { CursosModule } from './cursos/cursos.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { SamComponent } from './sam/sam.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CursosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
