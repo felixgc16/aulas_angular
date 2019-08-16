@@ -16,6 +16,10 @@ export class DataBindingComponent implements OnInit {
       nome: 'leonardo',
       idade : 20
   }
+  nomeDoCurso: string = 'Lais que gosta de pipoca'; 
+  laisesan: string = 'design';
+  enockLegal: string = 'Sair fora';
+
   getValor(){
     return 1;
   }
