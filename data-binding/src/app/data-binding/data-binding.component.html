@@ -1,5 +1,5 @@
 <section class="pb">
-
+<!--
 <article>
     <h3> Interpolação </h3>
     <p> Qual melhor site de pesquisa ?  {{ url }}</p>
@@ -10,7 +10,74 @@
 
 <article>
     <h3> property binding </h3>
-    <img src="{{urlImage}}">
+    <h4>Binding : </h4>
+    <img [src]="urlImage">
+
+    <h4>Interpolação</h4>
+    <img src="{{ urlImage }}">
+
+
+</article>
+
+<div class='box'>
+<article>
+    <h3>Class e Style Binding</h3>
+    <div>Selecione uma classe:
+        <select #classe (change)="0">
+            <option value="alert-success">Sucesso</option>
+            <option value="alert-info">Infor</option>
+            <option value="alert-warning">Alerta</option>
+            <option value="alert-danger">Erro</option>
+
+        </select>
+        <br><br>
+     ~~~~~~~~  Forma 1
+        <div class='alert {{ classe.value }}'>Texto colorido conforme o valor do select </div>
+     ~~~~~~~~ Forma 2
+        <div class='alert alert-danger' 
+        [style.color]="classe.value == 'alert-danger' ? 'red' : 'black'"
+        [style.font-size]="classe.value == 'alert-danger' ? '70px' : '50px'"
+        >Esse texto sofrerá alterações de acordo com o texto selecionado </div>
+     ~~~~~~~~  FORMA 3
+        <div class="alert " role="alert" [class.alert-success]="classe.value == 'alert-success'">SUCESSOOO</div>
+        <div class="alert " role="alert" [class.alert-info]="classe.value == 'alert-info'">INFOOR</div>
+        <div class="alert " role="alert" [class.alert-warning]="classe.value == 'alert-warning'">ALERTAAAA</div>
+        <div class="alert " role="alert" [class.alert-danger]="classe.value == 'alert-danger'">PERIGOOOOOOOOO</div>
+
+
+    </div>
+
+</article>
+
+</div>
+
+
+    <article>
+        <h3>Event binding</h3>
+
+        <button (click)="botaoClicado()" class='btn btn-primary'> Clica em mim !</button>
+
+        <br><br>
+
+        <input type="text"
+        (keyup)="onKeyUp($event)"
+        (keyup.enter)='salvarValor(leoVariavel.value)'
+        (blur)="salvarValor(leoVariavel.value)"
+        #leoVariavel />
+        <p>valor atual : {{ valorAtualInput }}</p>
+
+        <p>Valor salvo : {{ valorSalvo }}</p>
+
+        <p>Meu nome é {{pessoa.nome}} e tenho {{pessoa.idade}} anos de idade</p>
+        <input type="text" [(ngModel)]="pessoa.nome"/> -- 
+        <input type="text" [(ngModel)]="pessoa.idade"/>
+    </article>
+
+-->
+
+<article>
+    <h3>input/output properties</h3>
+    <appCurso [nome]='nomeDoCurso'></appCurso>
 
 </article>
 
