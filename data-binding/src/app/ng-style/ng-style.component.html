@@ -1,0 +1,38 @@
+<!-- <body  [style.background-color]="coor ? 'blue' : 'red' ">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h1 id="h1">{{corUm}}</h1>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <button (click)='mudarB()'> trocar </button>
+</body> -->
+
+<div  [style.background-color]="back.value">
+
+        <h2>Cor de cima</h2>
+        <select #back (change)="0">
+                <option value="red">VERMELHO</option>
+                <option value="yellow">AMARELO</option>
+                <option value="blue">AZUL</option>
+                <option value="green">VERDE</option>
+                <option value="black">PRETO</option>
+                <option value="white">WHITE</option>
+                
+        </select>
+
+
+        <h2>Cor de baixo</h2>
+        <select #backd (change)="0">
+                <option value="red">VERMELHO</option>
+                <option value="yellow">AMARELO</option>
+                <option value="blue">AZUL</option>
+                <option value="green">VERDE</option>
+                <option value="black">PRETO</option>
+                <option value="white">WHITE</option>
+                
+                        
+        </select>
+        <br>
+
+        <input type="text" [(ngModel)]="backd.value" >
+       <p [style.color]="backd.value">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic accusamus earum voluptatibus iusto optio assumenda suscipit itaque at quo eius, laborum placeat pariatur repudiandae qui ex debitis tempora quod inventore?</p>
+       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>

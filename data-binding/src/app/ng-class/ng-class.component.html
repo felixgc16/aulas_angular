@@ -1,0 +1,12 @@
+<h2>Teste ng class</h2><br>
+<hr>
+<!-- <button [class.btn-primary]="classDesejada" [class.btn]="classDesejada"> teste </button> <br> -->
+<button class='btn' [ngClass]="{
+   
+    'btn-dark' : !classDesejada,
+    'btn-primary' : classDesejada
+}
+" > {{ btn}} </button>
+
+<br><br>
+<button (click)='trocarClass()'  >trocar</button>

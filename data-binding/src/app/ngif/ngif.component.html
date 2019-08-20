@@ -1,0 +1,28 @@
+<h5>
+    *ngIf
+</h5>
+
+<div *ngIf="cursos.length  > 0" >
+    <p>lista de cursos aqui :</p>
+</div>
+<div *ngIf="cursos.length == 0" >
+    <p> não existem cursos para serem listados</p>
+</div>
+
+<hr>
+
+<div *ngIf="mostrarCursos" >
+    <p>boolean como true</p>
+</div>
+<div *ngIf="!mostrarCursos" >
+    <p>boolean como false</p>
+</div>
+<hr>
+
+<button (click)="trocarValor()" class="btn btn-primary"> mudar valor</button> <br>
+<p *ngIf="valorTeste" >valor inicial (  true )</p>
+<p *ngIf="!valorTeste" >valor trocou ( false )</p>
+
+
+
+
