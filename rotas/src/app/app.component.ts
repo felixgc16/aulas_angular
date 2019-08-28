@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
  
   title = 'rotas';
-  idd:number=0;
+  id:number=0;
 }
 
  

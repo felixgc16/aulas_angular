@@ -1,0 +1,27 @@
+.cor{
+    background-color: #6D9974;
+}
+.cor-2{
+    background-color: #5CB85C;
+    color: aliceblue;
+}
+.cor-3{
+    background-color: #E8E8E8;
+}
+.item-categoria{
+    background-color: #E8E8E8;
+    color: black;
+    border:none;
+    margin-left: 2%;
+    margin-top: 0.2%;
+    margin-bottom: 0.2%;
+}
+.logo-nome{
+    margin-left:2.5%;
+}
+.sla{
+    float:right;
+    margin-right: 1%;
+    margin-top:0.2%;
+    /* margin-button:0.2%; */
+}

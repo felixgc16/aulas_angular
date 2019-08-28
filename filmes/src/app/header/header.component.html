@@ -1,0 +1,20 @@
+<div class="cor">
+    <nav  class="navbar navbar-light cor">
+        <a class="navbar-brand logo-nome" routerLink=''>Navbar</a>
+        <form class="form-inline ">
+        <input class="form-control mr-sm-2" type="text" placeholder="User" >
+        <input class="form-control mr-sm-2" type="password" placeholder="Password" >
+        <button class="btn btn-outline-success my-2 my-sm-0 cor-2" type="submit">Log In</button>
+        </form>
+    
+    </nav > 
+    <div class="dropdown cor-3">
+            <button class="btn btn-secondary dropdown-toggle item-categoria" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             CATEGORIAS
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+              <a class="dropdown-item" href="#" *ngFor="let item of categorias">{{item}}</a>
+            </div>
+           <a routerLink='/pesquisar' > <button class='btn btn-primary sla' >Pesquisar Filme</button></a>
+          </div>
+</div>

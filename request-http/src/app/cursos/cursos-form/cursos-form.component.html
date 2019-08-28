@@ -1,0 +1,24 @@
+<form class="needs-validation" novalidate [formGroup]="form">
+<div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="nome" style="margin-top: 2%">Nome do curso</label>
+      <input type="text" class="form-control" id="nome" placeholder="Angular,Java,Etc..." required formControlName="nome"
+      [ngClass]="{'is-invalid' : submitted && form.get('nome').errors}" 
+      >
+      <div class="invalid-feedback" *ngIf="form.get('nome').errors && form.get('nome').errors['required']" >
+       Por favor informe um nome pro seu curso
+      </div>
+      <div class="invalid-feedback" *ngIf="form.get('nome').errors && form.get('nome').errors['minlength']" >
+        O nome do curso precisa ter no minimo 3 caracteres
+       </div>
+       <div class="invalid-feedback" *ngIf="form.get('nome').errors && form.get('nome').errors['maxlength']" >
+        O nome do curso pode ter no maximo 250 caracteres
+       </div>
+    </div>
+    </div>
+    <div>
+        <button type='submit' class="btn btn-primary" (click)='onSubmit()'>Enviar</button>{{''}}
+        <button type="button" class="btn btn-danger" (click)='onCancel()'>Cancelar</button>
+
+    </div>
+</form>

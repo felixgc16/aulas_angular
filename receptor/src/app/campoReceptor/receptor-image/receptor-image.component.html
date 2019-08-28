@@ -1,0 +1,17 @@
+<div class="caixa">
+  <span class="badge badge-dark font-r">Digite a URL da sua imagem</span>
+
+  <input
+    type="text"
+    class="form-control margen_1"
+    [(ngModel)]="valorI"
+    placeholder="Digite aqui a sua url"
+    (keyup.enter)="salvar(urlImagem.value)"
+    #urlImagem
+  />
+</div>
+<div class="row">
+  <div class="col-sm" *ngFor="let contado of imagens">
+    <img [src]="contado" alt="" class="margem"  />
+  </div>
+</div>

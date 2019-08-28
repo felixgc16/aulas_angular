@@ -1,0 +1,23 @@
+<div class="tit pesquisar">
+    <p>Pesquisar filme : {{pesquisa}}</p>
+</div>
+<div class="magem-pes">
+    <input type="text" class="form-control" placeholder="Pesquisar filme ..." (keyup)="testando() "
+        (blur)='saindo()' #pes [(ngModel)]='vp'>
+</div>
+<p style="color: white">{{leonardo}}</p><br>
+<p *ngIf="status!=true" class="pes-fil">pesquise um filme </p>
+
+<div class='filmes' >
+    <div class="container">
+        <div class="row">
+
+            <div class="col-2 marginn" *ngFor="let item of filmes">
+                <img #imge (mouseover)='mostrar(item.id)' (mouseleave)='esconder(item.id)' *ngIf="vp==item.nome" 
+                    [class.desfoque]='item.pes' [src]="item.imagemUrl" class="img-tamanho tras">
+                <div *ngIf="item.ativado == true" style='color:white;'> <label class='frente btn btn-secondary'>
+                        {{item.nome}} </label></div>
+            </div>
+        </div>
+
+    </div>

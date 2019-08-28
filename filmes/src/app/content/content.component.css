@@ -1,0 +1,28 @@
+
+.marginn{
+    margin-left: 2.5%;
+    margin-top: 3%;
+}
+.box{
+    background-color: black;
+}
+.tras{
+ z-index: 0;
+ display: inline-block;
+  position: relative;
+}
+.frente{
+    z-index: 1;
+    top: 145px;
+    position: absolute;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.desfoque{
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}

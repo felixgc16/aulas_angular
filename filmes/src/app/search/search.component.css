@@ -1,0 +1,32 @@
+p {
+    font: italic small-caps bold 25px "Comic Sans MS", sans-serif;
+}
+.tit{
+    margin: 1.5% 30% ;
+    color: aliceblue;
+    
+}
+@keyframes move{
+    from { transform : translateX(0); }
+    to {transform: translateX(500px)}
+}
+.pesquisar{
+    animation: move 7s infinite;
+    animation-direction: alternate;
+}
+.magem-pes{
+    margin-left: 10%;
+    /* margin-bottom: 100%; */
+    margin-top:5%;
+    margin-right: 10%;
+}
+.pes-fil{
+    margin: 1.5% 40% ;
+    color: aliceblue;
+    
+}
+.marginn{
+    margin-left: 2%;
+    margin-top:2%;
+
+}

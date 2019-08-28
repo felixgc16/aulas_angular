@@ -1,0 +1,12 @@
+<div class="box">
+    <div class="container">
+        <div class="row"> 
+            
+            <div class="col-2 marginn" *ngFor="let item of filmes">
+                <img #imge (mouseover)='mostrar(item.id)' (mouseleave)='esconder(item.id)' [class.desfoque]='item.ativado' [src]="item.imagemUrl" class="img-tamanho tras" > 
+                <div *ngIf="item.ativado == true" style='color:white;'> <label class='frente btn btn-secondary'> {{item.nome}} </label></div>
+            </div>
+        </div>
+    </div>
+
+</div>
