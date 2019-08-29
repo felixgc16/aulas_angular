@@ -1,14 +1,19 @@
+import { UploadFileModule } from './upload-file/upload-file.module';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, UrlSerializer } from '@angular/router';
 
 
 const routes: Routes = [
   {
-    path: '' ,  pathMatch: 'full' ,  redirectTo: 'cursos'
+    path: '' ,  pathMatch: 'full' ,  redirectTo: 'upload'
   },
   {
     path:'cursos',
     loadChildren: './cursos/cursos.module#CursosModule'
+  },
+  {
+    path:'upload',
+    loadChildren: './upload-file/upload-file.module#UploadFileModule'
   }
 ];
 

@@ -4,8 +4,9 @@ import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { Location } from "@angular/common";
 import { map, switchMap, catchError } from "rxjs/operators";
-import { Curso } from '../cursos-lista/curso';
-import { empty } from 'rxjs';
+import { Curso } from "../cursos-lista/curso";
+import { empty } from "rxjs";
+import { Cursos2Service } from '../cursos2.service';
 
 @Component({
   selector: "app-cursos-form",
@@ -15,17 +16,17 @@ import { empty } from 'rxjs';
 export class CursosFormComponent implements OnInit {
   form: FormGroup;
   submitted = false;
-  cursando:Curso;
+  cursando: Curso;
   cursos$: any;
   constructor(
     private fb: FormBuilder,
-    private service: CursosService,
+    private service: Cursos2Service,
     private location: Location,
     private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
-   const curso = this.route.snapshot.data['curso'];
+    const curso = this.route.snapshot.data["curso"];
     this.form = this.fb.group({
       id: [curso.id],
 
@@ -48,40 +49,34 @@ export class CursosFormComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    console.log(this.form.value) ;
+    console.log(this.form.value);
     if (this.form.valid) {
       console.log("submit");
-      if(this.form.value.id){
+      if (this.form.value.id) {
         //update
-        this.service.update(this.form.value).subscribe(
-          success => {
-            alert("Curso atualizado com sucesso")
-            console.log("atualização com exito");
-            this.location.back();
-          }
-        )
-      }else{
+        this.service.update(this.form.value).subscribe(success => {
+          alert("Curso atualizado com sucesso");
+          console.log("atualização com exito");
+          this.location.back();
+        });
+      } else {
         //create
         this.service.create(this.form.value).subscribe(
           success => {
-            alert("Curso criado com sucesso")
+            alert("Curso criado com sucesso");
             console.log("sucesso");
             this.location.back();
           },
-          error => alert('erro ao criar o curso'),
+          error => alert("erro ao criar o curso"),
           () => console.log("request ok")
         );
       }
-      
     }
   }
-  
- 
- 
+
   onCancel() {
     this.submitted = true;
     this.form.reset();
     console.log("onCancel");
   }
-   
 }

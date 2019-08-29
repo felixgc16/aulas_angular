@@ -6,6 +6,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CursosRoutingModule } from './cursos-routing.module';
 import { CursosListaComponent } from './cursos-lista/cursos-lista.component';
 import { CursosFormComponent } from './cursos-form/cursos-form.component';
+// import { AlunosListaComponent } from './alunos-lista/alunos-lista.component';
+// import { AlunosFormComponent } from './alunos-form/alunos-form.component';
 
 
 @NgModule({
