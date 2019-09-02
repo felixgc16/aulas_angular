@@ -10,7 +10,9 @@ export class UploadFileService {
 
   upload(files:Set<File>,url:string){
 
-    //Continuar a pegar os parametros do metodo a baixo
-    const request = new HttpRequest('POST',url,);
+    const formData = new FormData();
+    files.forEach( file => formData.append('file', file , file.name));
+    const request = new HttpRequest('POST',url, formData);
+    return this.http.request(request);
   }
 }
